@@ -1,5 +1,9 @@
 pipeline{
-  agent any
+  agent{
+     kubernetes{
+       defaultContainer 'jnlp'
+     }
+  }
   
   stages{
     stage('Build'){
