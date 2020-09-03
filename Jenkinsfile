@@ -1,16 +1,14 @@
 pipeline{
   agent{
      docker{
-      image 'node:latest'
+      image 'node:l4-alpine'
     }
   }
   
   stages{
     stage('Build'){
       steps{
-        sh '''
-          npm install
-        ''' 
+        sh 'npm install' 
       }
     }
     stage('Test'){
