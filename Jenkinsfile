@@ -1,8 +1,7 @@
 pipeline{
   agent{
-     kubernetes{
-       defaultContainer 'jnlp'
-     }
+     docker{
+      image 'docker:latest'
   }
   
   stages{
